@@ -1,0 +1,29 @@
+{
+	"lint": {
+		"include": ["src/"],
+		"exclude": [],
+		"rules": {
+			"tags": ["recommended"],
+			"exclude": [],
+			"include": []
+		}
+	},
+	"fmt": {
+		"useTabs": true,
+		"lineWidth": 0,
+		"indentWidth": 4,
+		"semiColons": false,
+		"singleQuote": true,
+		"include": ["src/"],
+		"exclude": []
+	},
+	"nodeModulesDir": true,
+	"test": {
+		"include": [],
+		"exclude": []
+	},
+	"tasks": {
+		"run": "deno run src/*.js"
+	},
+	"imports": {}
+}
