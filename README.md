@@ -11,7 +11,7 @@ Going though [Deno](https://deno.com/runtime)'s [examples](https://deno.com/manu
   - [x] [Fetch File Data](/src/fetchFile.js)
 - [x] [Read & Write Files](/src/readWrite.js)
 - [ ] [Unix cat Program](/src/cat.js)
-- [ ] [HTTP Web Server]
+- [x] [HTTP Web Server]
 - [ ] [File Server]
 - [ ] [TCP echo Server]
 - [ ] [Creating a Subprocess]
