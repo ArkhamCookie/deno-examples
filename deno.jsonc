@@ -10,7 +10,7 @@
 	},
 	"fmt": {
 		"useTabs": true,
-		"lineWidth": 0,
+		"lineWidth": 500,
 		"indentWidth": 4,
 		"semiColons": false,
 		"singleQuote": true,
@@ -23,7 +23,7 @@
 		"exclude": []
 	},
 	"tasks": {
-		"run:all": "deno run --allow-net --allow-read --allow-write src/*.js"
+		"run:all": "deno run --allow-net --allow-read --allow-write --allow-run src/*.js src/*/*.js"
 	},
 	"imports": {}
 }
