@@ -23,7 +23,7 @@
 		"exclude": []
 	},
 	"tasks": {
-		"run": "deno run src/*.js"
+		"run:all": "deno run --allow-net --allow-read --allow-write src/*.js"
 	},
 	"imports": {}
 }
