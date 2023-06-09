@@ -9,7 +9,7 @@ Going though [Deno](https://deno.com/runtime)'s [examples](https://deno.com/manu
 - [x] [Fetch Data](/src/fetchData/)
   - [x] [Fetch Net Data](/src/fetchData/fetchNet.js)
   - [x] [Fetch File Data](/src/fetchData/fetchFile.js)
-- [x] [Read & Write Files](/src/readWrite.js)
+- [x] [Read & Write Files](src/files/readWrite.js)
 - [ ] [Unix cat Program](src/commands/cat.js)
 - [x] [HTTP Web Server](src/server/webServer.js)
 - [ ] [File Server]
@@ -18,8 +18,8 @@ Going though [Deno](https://deno.com/runtime)'s [examples](https://deno.com/manu
   - [x] [Simple Subprocess](/src/subprocess/simpleSubprocess.js)
   - [x] [Piping Subprocess](/src/subprocess/pipingSubprocess.js)
 - [x] [OS Signals](/src/commands/osSignals.js)
-- [ ] [File System Events]
-- [ ] [Modules Metadata]
+- [x] [File System Events](/src/files/watcher.js)
+- [x] [Modules Metadata](/src/modules)
 - [ ] [Hashbang]
 - [ ] [Chat App]
 - [ ] [Word Finder]

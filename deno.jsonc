@@ -23,6 +23,7 @@
 		"exclude": []
 	},
 	"tasks": {
+		"lint:all": "deno lint src/*.js src/*/*.js",
 		"run:all": "deno run --allow-net --allow-read --allow-write --allow-run src/*.js src/*/*.js"
 	},
 	"imports": {}
