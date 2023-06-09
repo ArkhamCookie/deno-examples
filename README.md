@@ -10,14 +10,14 @@ Going though [Deno](https://deno.com/runtime)'s [examples](https://deno.com/manu
   - [x] [Fetch Net Data](/src/fetchData/fetchNet.js)
   - [x] [Fetch File Data](/src/fetchData/fetchFile.js)
 - [x] [Read & Write Files](/src/readWrite.js)
-- [ ] [Unix cat Program](/src/cat.js)
+- [ ] [Unix cat Program](src/commands/cat.js)
 - [x] [HTTP Web Server](src/server/webServer.js)
 - [ ] [File Server]
 - [x] [TCP echo Server](src/server/echoServer.js)
 - [x] [Creating a Subprocess](/src/subprocess/)
   - [x] [Simple Subprocess](/src/subprocess/simpleSubprocess.js)
   - [x] [Piping Subprocess](/src/subprocess/pipingSubprocess.js)
-- [ ] [OS Signals](/src/commands/osSignals.js)
+- [x] [OS Signals](/src/commands/osSignals.js)
 - [ ] [File System Events]
 - [ ] [Modules Metadata]
 - [ ] [Hashbang]
