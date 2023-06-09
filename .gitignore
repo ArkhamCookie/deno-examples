@@ -5,3 +5,5 @@ yarn.lock
 deno.lock
 .env
 .cache
+
+tests/*
