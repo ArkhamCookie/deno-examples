@@ -6,15 +6,17 @@ Going though [Deno](https://deno.com/runtime)'s [examples](https://deno.com/manu
 
 - [x] [Hello World](/src/helloWorld.js)
 - [ ] Manage Dependencies
-- [x] Fetch Data
-  - [x] [Fetch Net Data](/src/fetchNet.js)
-  - [x] [Fetch File Data](/src/fetchFile.js)
+- [x] [Fetch Data](/src/fetchData/)
+  - [x] [Fetch Net Data](/src/fetchData/fetchNet.js)
+  - [x] [Fetch File Data](/src/fetchData/fetchFile.js)
 - [x] [Read & Write Files](/src/readWrite.js)
 - [ ] [Unix cat Program](/src/cat.js)
-- [x] [HTTP Web Server]
+- [x] [HTTP Web Server](/src/webServer.js)
 - [ ] [File Server]
-- [ ] [TCP echo Server]
-- [ ] [Creating a Subprocess]
+- [x] [TCP echo Server](/src/echoServer.js)
+- [x] [Creating a Subprocess](/src/subprocess/)
+  - [x] [Simple Subprocess](/src/subprocess/simpleSubprocess.js)
+  - [x] [Piping Subprocess](/src/subprocess/pipingSubprocess.js)
 - [ ] [OS Signals]
 - [ ] [File System Events]
 - [ ] [Modules Metadata]
