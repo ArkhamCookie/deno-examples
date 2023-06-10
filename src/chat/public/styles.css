@@ -21,7 +21,7 @@ body {
 		"header header"
 		"userlist chat"
 		"userlist chat"
-		"message-input message-input";
+		"id-1 message-input";
 }
 
 /* Core Layout */
@@ -58,12 +58,14 @@ body {
 	gap: 0px 0px;
 	grid-area: message-input;
 }
+.id-1 { grid-area: id-1; }
 
 
 /* Border */
 .header,
 .userlist,
-.message-input-overflow {
+.message-input-overflow,
+.id-1 {
 	background-color: #3c474d;
 }
 
@@ -73,7 +75,8 @@ body {
 .chat,
 .message-input,
 .message-input-main,
-.message-input-overflow {
+.message-input-overflow,
+.id-1 {
 	border-color: dodgerblue;
 }
 
@@ -82,16 +85,23 @@ body {
 	border-top-style: solid;
 }
 
+.id-1,
+.message-input {
+	border-bottom-style: solid;
+}
+
 .header,
 .userlist,
-.chat {
+.chat,
+.message-input,
+.id-1 {
 	border-right-style: solid;
 }
 
-.message-input {
+.header,
+.userlist,
+.id-1 {
 	border-left-style: solid;
-	border-right-style: solid;
-	border-bottom-style: solid;
 }
 
 
@@ -105,13 +115,6 @@ body {
 .header-right {
 	text-align: right;
 	padding: 15px;
-}
-
-
-/* Side Panel */
-.corner,
-.userlist {
-	border-left-style: solid;
 }
 
 
