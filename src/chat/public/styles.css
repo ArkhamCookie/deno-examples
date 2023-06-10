@@ -15,11 +15,10 @@ body {
 	display: grid;
 	grid-auto-columns: 1fr;
 	grid-template-columns: 20% 1fr;
-	grid-template-rows: 200px 1fr 1fr 300px;
+	grid-template-rows: 200px 1fr 300px;
   	gap: 0px 0px;
 	grid-template-areas:
 		"header header"
-		"userlist chat"
 		"userlist chat"
 		"id-1 message-input";
 }
@@ -29,6 +28,8 @@ body {
 	display: grid;
 	grid-template-columns: 20% 1fr 1fr;
 	gap: 0px 0px;
+	grid-template-areas:
+		"header-corner header-left header-right";
 	grid-area: header;
 }
 
@@ -37,6 +38,9 @@ body {
 	grid-auto-columns: 1fr;
 	grid-template-rows: 100px 1fr;
 	gap: 0px 0px;
+	grid-template-areas:
+		"userlist-header"
+		"userlist-list";
 	grid-area: userlist;
 }
 
@@ -71,7 +75,7 @@ body {
 
 /* Border */
 .header,
-.corner,
+.header-corner,
 .userlist,
 .chat,
 .message-input,
