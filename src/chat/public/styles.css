@@ -41,7 +41,22 @@ body {
 .header,
 .corner,
 .userlist {
+	border-color: dodgerblue;
 	background-color: #3c474d;
+}
+
+.header {
+	border-right-style: solid;
+	border-bottom-style: solid;
+}
+
+.header,
+.corner {
+	border-top-style: solid;
+}
+
+.userlist {
+	border-right-style: solid;
 }
 
 
@@ -60,20 +75,18 @@ body {
 
 
 /* Header */
-.header-left,
-.header-right {
-	border-style: dotted;
-	border-radius: 5px;
-	border-color: cyan;
-}
-
 .header-right {
 	display: flex;
-	/* align-items: center; */
 	justify-content: right;
+	padding: 20px;
 }
 
+
 /* Side Panel */
+.corner,
+.userlist {
+	border-left-style: solid;
+}
 
 
 /* Chat */
