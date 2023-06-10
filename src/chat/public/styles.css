@@ -1,4 +1,9 @@
 /* Global */
+* {
+	height: 100%;
+	min-height: 100%;
+}
+
 html {
 	font-family: 'Courier New', Courier, monospace;
 	text-align: center;
@@ -31,12 +36,12 @@ body {
 .userlist { grid-area: 2 / 1 / 4 / 2; }
 .message-input {
 	display: grid;
-	/* grid-auto-columns: 1fr; */
 	grid-template-columns: 20% 1fr;
 	gap: 0px 0px;
 	grid-area: 3 / 1 / 4 / 4;
 }
-.chat {  display: grid;
+.chat {
+	display: grid;
 	grid-template-columns: 15% 1fr 1fr 15%;
 	gap: 0px 0px;
 	grid-area: 2 / 2 / 3 / 4;
@@ -92,10 +97,8 @@ body {
 
 .header-right {
 	display: flex;
-	/* justify-content: right; */
 	padding: 18px;
 }
-/* .leave-chat-btn {} */
 
 
 /* Side Panel */
@@ -103,10 +106,6 @@ body {
 .userlist {
 	border-left-style: solid;
 }
-
-/* .corner {
-	border-bottom-style: double;
-} */
 
 
 /* Menu Button */
