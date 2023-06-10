@@ -1,7 +1,7 @@
 const myUsername = prompt('Please enter your name') || 'Anonymous';
-// const port = 8080
-// const socket = new WebSocket('ws://localhost:' + port + 'start_web?username=' + myUsername)
-const socket = new WebSocket(`ws://localhost:8080/start_web_socket?username=${myUsername}`)
+const port = 8080
+const socket = new WebSocket('ws://localhost:' + port + 'start_web?username=' + myUsername)
+// const socket = new WebSocket(`ws://localhost:8080/start_web_socket?username=${myUsername}`)
 
 // /*
 socket.onmessage = (m) => {
