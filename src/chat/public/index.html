@@ -4,26 +4,45 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="icon" type="image/x-icon" href="/public/favicon.ico"/>
+	<link rel="icon" type="image/x-icon" href="./favicon.ico"/>
 	<title>Deno Chat</title>
 	<meta name="description" content="">
 
-	<script src="/public/app.js"></script>
+	<!-- <script src="./app.js"></script> -->
+	<link rel="stylesheet" type="text/css" href="./styles.css"/>
 </head>
 
 <body>
-	<div style="text-align: center">
-		<div>
-			<b>Users</b>
-			<hr/>
-			<div id="users"></div>
-			<hr class="visible-xs visible-sm"/>
+
+<div class="grid-container">
+
+	<div class="header-full">
+
+		<div class="header">
+			<div class="header-left">
+				<h1>Deno Chat</h1>
+			</div>
+
+			<div class="header-right">
+				<button type="button" class="leave-chat-btn">Leave Chat</button>
+			</div>
+
 		</div>
-		<div>
-			<input id="data" placeholder="send message"/>
-			<hr/>
-			<div id="conversation"></div>
+
+		<div class="cornor">
+			<h2>Room:</h2>
 		</div>
+
 	</div>
+
+	<div class="sidepan">
+		<div class="userlist"></div>
+	</div>
+
+	<div class="chat">Chat</div>
+
+	<div class="input">Input</div>
+</div>
+
 </body>
 </html>
