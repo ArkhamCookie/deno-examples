@@ -23,8 +23,13 @@
 		"exclude": []
 	},
 	"tasks": {
-		"lint:all": "deno lint src/*.js src/*/*.js",
-		"run:all": "deno run --allow-net --allow-read --allow-write --allow-run src/*.js src/*/*.js"
+		"prepare": "deno cache ./src/*.js ./src/*/*.js",
+
+		"lint:chat": "deno lint ./src/chat/*.js",
+		"dev:chat": "cd ./src/chat && pwd ; deno run --allow-all --watch ./server.js",
+
+		"lint:all": "deno lint ./src/*.js ./src/*/*.js",
+		"run:all": "deno run --allow-net --allow-read --allow-write --allow-run ./src/*.js ./src/*/*.js"
 	},
 	"imports": {}
 }
