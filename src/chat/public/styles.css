@@ -29,7 +29,13 @@ body {
 	gap: 0px 0px;
 }
 .userlist { grid-area: 2 / 1 / 4 / 2; }
-.input { grid-area: 3 / 1 / 4 / 4; }
+.message-input {
+	display: grid;
+	/* grid-auto-columns: 1fr; */
+	grid-template-columns: 20% 1fr;
+	gap: 0px 0px;
+	grid-area: 3 / 1 / 4 / 4;
+}
 .chat {  display: grid;
 	grid-template-columns: 15% 1fr 1fr 15%;
 	gap: 0px 0px;
@@ -41,24 +47,41 @@ body {
 .header,
 .corner,
 .userlist {
-	border-color: dodgerblue;
 	background-color: #3c474d;
 }
 
-.header {
-	border-right-style: solid;
-	border-bottom-style: solid;
+.header,
+.corner,
+.userlist,
+.chat,
+.message-input,
+.message-input-main {
+	border-color: dodgerblue;
 }
 
 .header,
-.corner {
+.corner,
+.chat {
 	border-top-style: solid;
 }
 
+.header,
 .userlist {
 	border-right-style: solid;
 }
 
+.chat {
+	border-right-style: solid;
+}
+
+.message-input {
+	border-right-style: solid;
+	border-bottom-style: solid;
+}
+
+.message-input-main {
+	border-top-style: solid;
+}
 
 /* Header */
 .header-left {
@@ -81,21 +104,10 @@ body {
 	border-left-style: solid;
 }
 
+/* .corner {
+	border-bottom-style: double;
+} */
 
-/* Chat */
-.chat,
-.input {
-	color: black;
-	font-size: 20px;
-}
-
-.chat {
-	background-color: #fff;
-	padding: 20px 0;
-}
-
-
-/* Menu */
 
 /* Menu Button */
 .userlist-toggle {
@@ -148,4 +160,21 @@ input:checked + .slider:before {
 	-webkit-transform: translateX(26px);
 	-ms-transform: translateX(26px);
 	transform: translateX(26px);
+}
+
+
+/* Message Input */
+
+
+
+/* Chat */
+.chat,
+.message-input {
+	color: black;
+	font-size: 20px;
+}
+
+.chat {
+	background-color: #fff;
+	padding: 20px 0;
 }
