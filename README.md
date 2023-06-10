@@ -30,6 +30,6 @@ Going though [Deno](https://deno.com/runtime)'s [examples](https://deno.com/manu
 
 [The Deno Manual Example Section](https://deno.com/manual/examples)
 
-[Layoutit!](https://github.com/Leniolabs/layoutit-grid) - A css grid layout generator. *It's really useful!*
+[Layoutit!](https://github.com/Leniolabs/layoutit-grid) - A css grid layout generator. ***It's really useful!***
 
 "[Heart message](https://www.favicon.cc/?action=icon&file_id=962048)" [favicon](/src/chat/public/favicon.ico)
