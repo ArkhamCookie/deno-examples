@@ -15,7 +15,7 @@ body {
 	display: grid;
 	grid-auto-columns: 1fr;
 	grid-template-columns: 20% 1fr;
-	grid-template-rows: 15% 1fr 20%;
+	grid-template-rows: 15% 1fr 200px;
   	gap: 0px 0px;
 	grid-template-areas:
 		"header header"
@@ -44,35 +44,26 @@ body {
 	grid-area: userlist;
 }
 
-/* .chat {
+.chat {
 	display: grid;
 	grid-template-columns: 10% 1fr 1fr 10%;
-	grid-template-rows: minmax(20px, 60px);
-	gap: 5px 0px;
+	grid-template-rows: 1fr;
+	gap: 0px 10px;
 	grid-template-areas:
-		"...."
-		"....";
-	align-self: stretch;
+		"chat-user chat-message-received chat-message-sent chat-you";
 	grid-area: chat;
-} */
-
-.chat { grid-area: chat; }
-
-.message-input {
-	display: grid;
-	grid-template-columns: 20% 1fr;
-	gap: 0px 0px;
-	grid-area: message-input;
 }
+
 .id-1 { grid-area: id-1; }
+.message-input { grid-area: message-input; }
 
 /* Main Coloring */
 .header,
 .userlist,
-.message-input-overflow,
 .id-1 {
 	background-color: #3c474d;
 }
+/*  */
 
 
 /* Border */
@@ -110,6 +101,7 @@ body {
 .id-1 {
 	border-left-style: solid;
 }
+/*  */
 
 
 /* Header */
@@ -123,6 +115,7 @@ body {
 	text-align: right;
 	padding: 15px;
 }
+/*  */
 
 
 /* Menu Button */
@@ -177,6 +170,7 @@ input:checked + .slider:before {
 	-ms-transform: translateX(15px);
 	transform: translateX(15px);
 }
+/*  */
 
 
 /* Chat */
@@ -190,9 +184,10 @@ input:checked + .slider:before {
 	background-color: #fff;
 	padding: 10px 10px;
 }
+/*  */
 
 
 /* Message Input */
-.message-input-main {
+.message-input {
 	padding: 10px;
 }
