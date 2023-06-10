@@ -29,3 +29,5 @@ Going though [Deno](https://deno.com/runtime)'s [examples](https://deno.com/manu
 ## Credits
 
 [The Deno Manual Example Section](https://deno.com/manual/examples)
+
+"[Heart message](https://www.favicon.cc/?action=icon&file_id=962048)" [favicon](/src/chat/public/favicon.ico)
