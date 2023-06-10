@@ -19,9 +19,9 @@ Going though [Deno](https://deno.com/runtime)'s [examples](https://deno.com/manu
   - [x] [Piping Subprocess](/src/subprocess/pipingSubprocess.js)
 - [x] [OS Signals](/src/commands/osSignals.js)
 - [x] [File System Events](/src/files/watcher.js)
-- [x] [Modules Metadata](/src/modules)
+- [x] [Modules Metadata](/src/modules/)
 - [ ] [Hashbang]
-- [ ] [Chat App]
+- [ ] [Chat App](/src/chat/)
 - [ ] [Word Finder]
 
 ---
