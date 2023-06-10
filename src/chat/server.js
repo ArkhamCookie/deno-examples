@@ -1,4 +1,5 @@
 import { Application, Router } from 'https://deno.land/x/oak@v12.5.0/mod.ts'
+// import { serve } from 'https://deno.land/std@0.191.0/http/mod.ts'
 
 const connectedClients = new Map()
 
@@ -12,14 +13,14 @@ function broadcast(message) {
 	}
 }
 
-function broadcast_usernames() {
+function broadcastUsernames() {
 	const usernames = [...connectedClients.keys()]
 	console.log('Sending updated username list to all clients: ' + JSON.stringify(usernames))
 	broadcast(JSON.stringify({ event: 'update-users', usernames: usernames }))
 }
 
-router.get('/start_web_socket', async (ctx) => {
-	const socket = await ctx.update()
+router.get('/ws', async (ctx) => {
+	const socket = await ctx.upgrade()
 	const username = ctx.request.url.searchParams.get('username')
 
 	if (connectedClients.has(username)) {
@@ -32,13 +33,13 @@ router.get('/start_web_socket', async (ctx) => {
 	console.log('New client connected: ' + username)
 
 	socket.onopen = () => {
-		broadcast_usernames()
+		broadcastUsernames()
 	}
 
 	socket.onclose = () => {
 		console.log('Client ' + socket.username + ' disconnected')
 		connectedClients.delete(socket.username)
-		broadcast_usernames()
+		broadcastUsernames()
 	}
 
 	socket.onmessage = (m) => {
@@ -54,7 +55,8 @@ router.get('/start_web_socket', async (ctx) => {
 app.use(router.routes())
 app.use(router.allowedMethods())
 app.use(async (context) => {
-	await context.send({ root: `${Deno.cwd()}/`, index: 'public/index.html' })
+	// await context.send({ root: `${Deno.cwd()}/`, index: 'public/index.html' })
+	await context.send({ root: Deno.cwd() + '/', index: 'public/index.html' })
 })
 
 console.log('Listening at http://localhost:' + port)
