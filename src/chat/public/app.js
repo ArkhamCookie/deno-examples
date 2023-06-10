@@ -12,7 +12,7 @@ socket.onopen = function() {
 
 // /*
 socket.onmessage = (m) => {
-	const data = JSON.parse(m.data);
+	const data = JSON.parse(m.data)
 
 	switch (data.event) {
 		case 'update-users':
@@ -26,24 +26,23 @@ socket.onmessage = (m) => {
 		case 'send-message':
 			addMessage(data.username, data.message)
 			break
-		}
+	}
 }
 // */
 
 function addMessage(username, message) {
-	document.getElementById('conversation'
-		).innerHTML += '<b> '+ username + ' </b>:' + message + ' <br/>'
-	// document.getElementById(
-		// "conversation"
-	// ).innerHTML += `<b> ${username} </b>: ${message} <br/>`
+	document.getElementById('conversation').innerHTML += '<b> ' + username + ' </b>: ' + message + ' <br/>'
+	/* document.getElementById(
+		'conversation',
+	).innerHTML += `<b> ${username} </b>: ${message} <br/>` */
 }
 
 window.onload = () => {
 	document.getElementById('data').addEventListener('keypress', (e) => {
 		if (e.key === 'Enter') {
-			const inputElement = document.getElementById("data");
-			const message = inputElement.value;
-			inputElement.value = "";
+			const inputElement = document.getElementById('data')
+			const message = inputElement.value
+			inputElement.value = ''
 			socket.send(JSON.stringify({ event: 'send-message', message: message }))
 			/* socket.send(
 				JSON.stringify({
