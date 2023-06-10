@@ -15,7 +15,7 @@ body {
 	display: grid;
 	grid-auto-columns: 1fr;
 	grid-template-columns: 20% 1fr;
-	grid-template-rows: 200px 1fr 300px;
+	grid-template-rows: 15% 1fr 20%;
   	gap: 0px 0px;
 	grid-template-areas:
 		"header header"
@@ -44,7 +44,7 @@ body {
 	grid-area: userlist;
 }
 
-.chat {
+/* .chat {
 	display: grid;
 	grid-template-columns: 10% 1fr 1fr 10%;
 	grid-template-rows: minmax(20px, 60px);
@@ -54,7 +54,9 @@ body {
 		"....";
 	align-self: stretch;
 	grid-area: chat;
-}
+} */
+
+.chat { grid-area: chat; }
 
 .message-input {
 	display: grid;
