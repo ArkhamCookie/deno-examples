@@ -13,14 +13,14 @@ function broadcast(message) {
 	}
 }
 
-function broadcast_usernames() {
+function broadcastUsernames() {
 	const usernames = [...connectedClients.keys()]
 	console.log('Sending updated username list to all clients: ' + JSON.stringify(usernames))
 	broadcast(JSON.stringify({ event: 'update-users', usernames: usernames }))
 }
 
 router.get('/ws', async (ctx) => {
-	const socket = await ctx.update()
+	const socket = await ctx.upgrade()
 	const username = ctx.request.url.searchParams.get('username')
 
 	if (connectedClients.has(username)) {
@@ -33,13 +33,13 @@ router.get('/ws', async (ctx) => {
 	console.log('New client connected: ' + username)
 
 	socket.onopen = () => {
-		broadcast_usernames()
+		broadcastUsernames()
 	}
 
 	socket.onclose = () => {
 		console.log('Client ' + socket.username + ' disconnected')
 		connectedClients.delete(socket.username)
-		broadcast_usernames()
+		broadcastUsernames()
 	}
 
 	socket.onmessage = (m) => {
