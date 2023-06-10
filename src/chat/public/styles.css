@@ -8,14 +8,14 @@ html {
 body {
 	background-color: #222222;
 }
-
+/*  */
 
 /* Grid Layout Start */
 .grid-container {
 	display: grid;
 	grid-auto-columns: 1fr;
 	grid-template-columns: 20% 1fr;
-	grid-template-rows: 15% 1fr 200px;
+	grid-template-rows: 15% 1fr 100px;
   	gap: 0px 0px;
 	grid-template-areas:
 		"header header"
