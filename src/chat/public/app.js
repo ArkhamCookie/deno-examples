@@ -3,13 +3,13 @@ const myUsername = prompt('Please enter your name') || 'Anonymous';
 // const socket = new WebSocket('ws://localhost:' + port + 'start_web?username=' + myUsername)
 const socket = new WebSocket(`ws://localhost:8080/start_web_socket?username=${myUsername}`)
 
-/*
+// /*
 socket.onmessage = (m) => {
 	const data = JSON.parse(m.data);
 
 	switch (data.event) {
 		case 'update-users':
-			let userListHtml = ''
+			// let userListHtml = ''
 			for (const username of data.usernames) {
 				userListHtml += '<div> ' + username + ' </div>'
 			}
@@ -21,15 +21,13 @@ socket.onmessage = (m) => {
 			break
 		}
 }
-*/
+// */
 
-/*
 function addMessage(username, message) {
 	document.getElementById(
 		"conversation"
 	).innerHTML += `<b> ${username} </b>: ${message} <br/>`;
 }
-*/
 
 window.onload = () => {
 	document.getElementById('data').addEventListener('keypress', (e) => {
