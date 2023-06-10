@@ -9,6 +9,7 @@ body {
 	background-color: #222222;
 }
 
+
 /* Grid Layout Start */
 .grid-container {
 	display: grid;
@@ -18,40 +19,38 @@ body {
   	grid-auto-flow: row;
 }
 
+
 /* Core Layout */
 .corner { grid-area: 1 / 1 / 2 / 2; }
-.header { grid-area: 1 / 2 / 2 / 4; }
+.header {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-area: 1 / 2 / 2 / 4;
+	gap: 0px 0px;
+}
 .userlist { grid-area: 2 / 1 / 4 / 2; }
 .input { grid-area: 3 / 1 / 4 / 4; }
 .chat {  display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 15% 1fr 1fr 15%;
 	gap: 0px 0px;
-	grid-auto-flow: row;
 	grid-area: 2 / 2 / 3 / 4;
 }
 
-/* Main Grid Outline */
-.corner,
+
+/* Border */
 .header,
-.userlist,
-.input,
-.chat {
-	border-style: dashed;
-	border-width: 1px;
-	/* border-color: #3c474d; */
-	border-color: red;
+.corner,
+.userlist {
+	background-color: #3c474d;
 }
 
 
 /* Corner */
-/* .corner {} */
-
 .corner-toggle-menu {
-	position: relative;
-
+	/* position: relative; */
+	display: flex;
 	background-color: red;
 	border: none;
-	overflow: hidden;
 }
 .corner-toggle-menu:hover {
 	background-color: white;
@@ -59,20 +58,22 @@ body {
 /* .corner-toggle-menu:after {} */
 /* .corner-toggle-menu:active::after {} */
 
+
 /* Header */
-.header, .corner {
-	text-indent: 2.5%;
-	background-color: #3c474d;
+.header-left,
+.header-right {
+	border-style: dotted;
+	border-radius: 5px;
+	border-color: cyan;
 }
 
-.header-right { grid-area: 1 / 3 / 2 / 4; }
-.header-left { grid-area: 1 / 2 / 2/ 3; }
-
+.header-right {
+	display: flex;
+	/* align-items: center; */
+	justify-content: right;
+}
 
 /* Side Panel */
-.userlist {
-	background-color: #273238;
-}
 
 
 /* Chat */
