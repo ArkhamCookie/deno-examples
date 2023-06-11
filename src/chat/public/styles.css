@@ -36,11 +36,8 @@ body {
 .userlist {
 	display: grid;
 	grid-auto-columns: 1fr;
-	grid-template-rows: 100px 1fr;
-	gap: 0px 0px;
-	grid-template-areas:
-		"userlist-header"
-		"userlist-list";
+	grid-auto-rows: auto;
+	gap: 10px 0px;
 	grid-area: userlist;
 }
 
