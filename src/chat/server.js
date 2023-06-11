@@ -1,11 +1,30 @@
 import { Application, Router } from 'https://deno.land/x/oak@v12.5.0/mod.ts'
+import { getCookies, setCookie } from 'https://deno.land/std@0.191.0/http/cookie.ts'
 // import { serve } from 'https://deno.land/std@0.191.0/http/mod.ts'
 
 const connectedClients = new Map()
-
-const app = new Application()
 const port = 8080
+const app = new Application()
 const router = new Router()
+
+const headers = new Headers()
+const cookies = getCookies(headers)
+let myUsername
+
+console.log(cookies)
+
+if (cookies != '{}') {
+	console.log('Welcome back ' + myUsername + '!')
+} else {
+	myUsername = prompt('Please enter your username.')
+
+	const cookie = { name: 'myUsername', value: myUsername }
+	setCookie(headers, cookie)
+	const cookieHeader = headers.get('set-cookie')
+	console.log(cookieHeader)
+}
+
+console.log('Welcome ' + myUsername + '.')
 
 function broadcast(message) {
 	for (const client of connectedClients.values()) {
