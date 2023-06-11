@@ -1,16 +1,12 @@
 const myUsername = prompt('Please enter your username.')
 const port = 8080
-const socket = new WebSocket('ws://localhost:' + port + 'start_web?username=' + myUsername)
-// const socket = new WebSocket(`ws://localhost:${port}/start_web_socket?username=${myUsername}`)
+const socket = new WebSocket('ws://localhost:' + port)
 
-// /*
 socket.onopen = function() {
 	console.log('[OPEN] Connection established.')
 	console.log(myUsername + 'joined!')
 }
-// */
 
-// /*
 socket.onmessage = (m) => {
 	const data = JSON.parse(m.data)
 
@@ -28,13 +24,9 @@ socket.onmessage = (m) => {
 			break
 	}
 }
-// */
 
 function addMessage(username, message) {
 	document.getElementById('conversation').innerHTML += '<b> ' + username + ' </b>: ' + message + ' <br/>'
-	/* document.getElementById(
-		'conversation',
-	).innerHTML += `<b> ${username} </b>: ${message} <br/>` */
 }
 
 window.onload = () => {
@@ -44,12 +36,6 @@ window.onload = () => {
 			const message = inputElement.value
 			inputElement.value = ''
 			socket.send(JSON.stringify({ event: 'send-message', message: message }))
-			/* socket.send(
-				JSON.stringify({
-					event: 'send-message',
-					message: message
-				})
-			) */
 		}
 	})
 }
