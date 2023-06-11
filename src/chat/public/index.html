@@ -9,7 +9,6 @@
 	<meta name="description" content="">
 
 	<!-- <script src="./app.js"></script> -->
-	<script src="./nav.js"></script>
 	<link rel="stylesheet" type="text/css" href="./styles.css"/>
 </head>
 
@@ -17,14 +16,15 @@
 
 <div class="grid-container">
 
-	<div class="corner">
-		<label class="userlist-toggle">
-			<input type="checkbox">
-			<span class="slider"></span>
-		</label>
-	</div>
-
 	<div class="header">
+		<div class="header-corner">
+			<h2>Chatroom Name</h2>
+			<h2>User List</h2>
+			<label class="userlist-toggle">
+				<input type="checkbox">
+				<span class="slider"></span>
+			</label>
+		</div>
 		<div class="header-left">
 			<h1>Deno Chat</h1>
 		</div>
@@ -34,21 +34,26 @@
 	</div>
 
 	<div class="userlist">
-		<h2>User List</h2>
-	</div>
-
-	<div class="message-input">
-		<div class="message-input-overflow"></div>
-		<div class="message-input-main">
-			<p>INPUT</p>
+		<div class="userlist-list">
+			User 1<br>
+			User 2<br>
 		</div>
 	</div>
 
 	<div class="chat">
-		<div>User</div>
-		<div>Message Slot One</div>
-		<div>Message Slot Two</div>
-		<div>You</div>
+		<div class="chat-user">User</div>
+		<div class="chat-message-received">Message Received</div>
+		<div class="chat-message-sent"><br>Message Slot Two</div>
+		<div class="chat-you"><br>You</div>
+	</div>
+
+	<div class="id-1">CORNER</div>
+
+	<div class="message-input">
+			<form>
+				<input type="text" id="message-input-send" name="message-input-send">
+			</form>
+		</div>
 	</div>
 
 </div>
