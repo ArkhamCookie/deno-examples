@@ -19,8 +19,10 @@ if (cookies != '{}') {
 	myUsername = prompt('Please enter your username.')
 
 	const cookie = { name: 'myUsername', value: myUsername }
-	setCookie(headers, cookie)
 	const cookieHeader = headers.get('set-cookie')
+
+	setCookie(headers, cookie)
+
 	console.log(cookieHeader)
 }
 
