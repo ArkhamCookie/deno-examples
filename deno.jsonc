@@ -25,11 +25,10 @@
 	"tasks": {
 		"prepare": "deno cache ./src/*.js ./src/*/*.js",
 
-		"lint:chat": "deno lint ./src/chat/*.js ./src/chat/public/*.js",
-		"fmt:chat": "deno fmt ./src/chat/*.js ./src/chat/public/*.js",
-		"dev:chat": "cd ./src/chat && pwd ; deno run --allow-all --watch ./server.js",
-
 		"lint:all": "deno lint ./src/*.js ./src/*/*.js",
+		"fmt:all": "deno fmt ./src/*.js ./src/*/*.js",
+		"test": "deno task lint:all && deno task fmt:all",
+
 		"run:all": "deno run --allow-net --allow-read --allow-write --allow-run ./src/*.js ./src/*/*.js"
 	},
 	"imports": {}
