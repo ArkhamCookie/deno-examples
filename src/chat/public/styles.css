@@ -1,21 +1,33 @@
 /* Global */
+/* Main Styling */
 html {
 	font-family: 'Courier New', Courier, monospace;
 	text-align: center;
-	color: #fff;
+	color: white;
 }
 
 body {
 	background-color: #222222;
+}
+
+.header,
+.userlist,
+.id-1 {
+	background-color: #3c474d;
+}
+
+.chat,
+.message-input {
+	color: black;
+	font-size: 12px;
 }
 /*  */
 
 /* Grid Layout Start */
 .grid-container {
 	display: grid;
-	grid-auto-columns: 1fr;
 	grid-template-columns: 20% 1fr;
-	grid-template-rows: 15% 1fr 100px;
+	grid-template-rows: 15% 500px 100px;
   	gap: 0px 0px;
 	grid-template-areas:
 		"header header"
@@ -27,39 +39,16 @@ body {
 .header {
 	display: grid;
 	grid-template-columns: 20% 1fr 1fr;
-	gap: 0px 0px;
 	grid-template-areas:
 		"header-corner header-left header-right";
 	grid-area: header;
 }
 
-.userlist {
-	display: grid;
-	grid-auto-columns: 1fr;
-	grid-auto-rows: auto;
-	gap: 10px 0px;
-	grid-area: userlist;
-}
 
-.chat {
-	display: grid;
-	grid-template-columns: 10% 1fr 1fr 10%;
-	grid-template-rows: 1fr;
-	gap: 0px 10px;
-	grid-template-areas:
-		"chat-user chat-message-received chat-message-sent chat-you";
-	grid-area: chat;
-}
-
+.userlist { grid-area: userlist; }
+.chat { grid-area: chat; }
 .id-1 { grid-area: id-1; }
 .message-input { grid-area: message-input; }
-
-/* Main Coloring */
-.header,
-.userlist,
-.id-1 {
-	background-color: #3c474d;
-}
 /*  */
 
 
@@ -74,17 +63,15 @@ body {
 	border-color: dodgerblue;
 }
 
+/* Top */
 .header,
 .chat,
 .message-input {
 	border-top-style: solid;
 }
+/* .userlist { border-top-style: dotted; } */
 
-.id-1,
-.message-input {
-	border-bottom-style: solid;
-}
-
+/* Right */
 .header,
 .userlist,
 .chat,
@@ -93,6 +80,13 @@ body {
 	border-right-style: solid;
 }
 
+/* Bottom */
+.id-1,
+.message-input {
+	border-bottom-style: solid;
+}
+
+/* Left */
 .header,
 .userlist,
 .id-1 {
@@ -116,6 +110,8 @@ body {
 
 
 /* Menu Button */
+.header-corner { padding: 10px; }
+
 .userlist-toggle {
 	position: relative;
 	display: inline-block;
@@ -170,16 +166,92 @@ input:checked + .slider:before {
 /*  */
 
 
-/* Chat */
-.chat,
-.message-input {
-	color: black;
-	font-size: 12px;
+/* User Info */
+.user-icon {
+	align-self: center;
+
+	border-color: black;
+	border-style: ridge;
+}
+/*  */
+
+
+/* Userlist */
+.userlist {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+
+	padding-top: 15px;
+	gap: 10px 0px;
 }
 
+.userlist > div {
+	border-color: orange;
+	border-style: dotted;
+
+	padding: 5px;
+	margin: 5px;
+}
+/*  */
+
+
+/* Chat */
+/* Chat Layout */
 .chat {
-	background-color: #fff;
+	display: flex;
+	flex-direction: column-reverse;
+	gap: 5px 0px;
+}
+
+/* .chat-message {
+	display: grid;
+} */
+
+.chat-message-received {
+	display: grid;
+	grid-template-columns: 5% 1fr;
+	grid-template-areas: "received-user" "received-message";
+}
+
+.chat-message-sent {
+	display: grid;
+	grid-template-columns: 1fr 5%;
+	grid-template-areas: "send-message send-user";
+}
+
+/* Chat Styling */
+.chat {
+	background-color: white;
 	padding: 10px 10px;
+}
+
+.chat > div {
+	background-color: lightgray;
+	padding: 10px 5px;
+}
+
+.chat-message {
+	border-color: black;
+	border-style: solid;
+	border-bottom-width: thick;
+	border-bottom-style: double;
+}
+
+.chat-message-received {
+	text-align: left;
+
+	border-left-style: solid;
+	border-left-color: blue;
+	border-left-width: thick;
+}
+
+.chat-message-sent {
+	text-align: right;
+
+	border-right-style: solid;
+	border-right-color: green;
+	border-right-width: thick;
 }
 /*  */
 
