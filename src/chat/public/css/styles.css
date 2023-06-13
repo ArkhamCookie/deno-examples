@@ -167,12 +167,6 @@ input:checked + .slider:before {
 
 
 /* User Info */
-.user-icon {
-	align-self: center;
-
-	border-color: black;
-	border-style: ridge;
-}
 /*  */
 
 
@@ -192,66 +186,6 @@ input:checked + .slider:before {
 
 	padding: 5px;
 	margin: 5px;
-}
-/*  */
-
-
-/* Chat */
-/* Chat Layout */
-.chat {
-	display: flex;
-	flex-direction: column-reverse;
-	gap: 5px 0px;
-}
-
-/* .chat-message {
-	display: grid;
-} */
-
-.chat-message-received {
-	display: grid;
-	grid-template-columns: 5% 1fr;
-	grid-template-areas: "received-user" "received-message";
-}
-
-.chat-message-sent {
-	display: grid;
-	grid-template-columns: 1fr 5%;
-	grid-template-areas: "send-message send-user";
-}
-
-/* Chat Styling */
-.chat {
-	background-color: white;
-	padding: 10px 10px;
-}
-
-.chat > div {
-	background-color: lightgray;
-	padding: 10px 5px;
-}
-
-.chat-message {
-	border-color: black;
-	border-style: solid;
-	border-bottom-width: thick;
-	border-bottom-style: double;
-}
-
-.chat-message-received {
-	text-align: left;
-
-	border-left-style: solid;
-	border-left-color: blue;
-	border-left-width: thick;
-}
-
-.chat-message-sent {
-	text-align: right;
-
-	border-right-style: solid;
-	border-right-color: green;
-	border-right-width: thick;
 }
 /*  */
 
