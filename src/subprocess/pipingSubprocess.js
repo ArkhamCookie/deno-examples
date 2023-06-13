@@ -9,14 +9,14 @@ const file = await Deno.open('./process_output.txt', {
 
 const command = new Deno.Command('yes', {
 	stdout: 'piped',
-	stderr: 'piped'
+	stderr: 'piped',
 })
 
 const process = command.spawn()
 
 const joined = mergeReadableStreams(
 	process.stdout,
-	process.stderr
+	process.stderr,
 )
 
 joined.pipeTo(file.writable).then(() => console.log('pipe join done'))
