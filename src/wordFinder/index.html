@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Deno Word Finder</title>
+	<meta name="version" content="1.0"/>
+</head>
+
+<body>
+
+<h1>Deno Word Finder</h1>
+
+<form id="perform-search" name="perform-search" method="get" action="/api/search">
+	<label for="search-text">Search Text: </label>
+	<input id="search-text" name="search-text" type="text" value="${pattern}"/>
+</form>
+
+${searchResultsContent}
+
+<h2>Instructions</h2>
+
+</body>
+</html>
