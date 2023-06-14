@@ -1,8 +1,8 @@
 # deno-examples
 
-Going though [Deno](https://deno.com/runtime)'s [examples](https://deno.com/manual@v1.34.2/examples) to get a better understanding of Deno.
+Going through the [Deno Manual](https://deno.com/manual)'s [examples](https://deno.com/manual/examples) to get a better understanding of [Deno](https://deno.com/runtime).
 
-## TOC
+## Table of Contents
 
 - [x] [Hello World](/src/helloWorld.js)
 - [ ] Manage Dependencies
@@ -20,9 +20,9 @@ Going though [Deno](https://deno.com/runtime)'s [examples](https://deno.com/manu
 - [x] [OS Signals](/src/commands/osSignals.js)
 - [x] [File System Events](/src/files/watcher.js)
 - [x] [Modules Metadata](/src/modules/)
-- [ ] [Hashbang]
-- [ ] [Chat App](/src/chat/)
-- [ ] [Word Finder]
+- [x] Hashbang
+- [ ] [Chat App](https://github.com/ArkhamCookie/chatApp-simple)[^1]
+- [ ] [Word Finder](/)
 
 ---
 
@@ -30,6 +30,6 @@ Going though [Deno](https://deno.com/runtime)'s [examples](https://deno.com/manu
 
 [The Deno Manual Example Section](https://deno.com/manual/examples)
 
-[Layoutit!](https://github.com/Leniolabs/layoutit-grid) - A css grid layout generator. ***It's really useful!***
+---
 
-"[Heart message](https://www.favicon.cc/?action=icon&file_id=962048)" [favicon](/src/chat/public/favicon.ico)
+[^1]: I moved the chat app to [it's own repo](https://github.com/ArkhamCookie/chatApp-simple).
